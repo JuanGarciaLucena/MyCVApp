@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">MyCVApp</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string>
+    <string name="presentation">Carta de presentación</string>
+    <string name="experience">Experiencia</string>
+    <string name="tech">Tecnologías</string>
+    <string name="personal">Datos Personales</string>
+    <string name="projects">Proyectos</string>
+    <string name="dev_name">Juan Lucena</string>
+    <string name="dev_mail">JuanGarciaLucena@gmail.com</string>
+    <string name="text_presentation">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+        quis aliquam metus. Fusce molestie id magna vitae euismod. Mauris at ex nec urna varius
+        mollis at at purus. Pellentesque non dapibus ex. Aenean aliquam eu quam consectetur auctor.
+        Ut accumsan tellus eget risus malesuada, ac laoreet sapien hendrerit. Cras pretium cursus
+        bibendum. Suspendisse elementum, lorem quis interdum posuere, quam odio pretium dui, quis
+        elementum turpis dolor convallis mauris. Suspendisse rhoncus, leo bibendum elementum
+        vulputate, erat augue interdum urna, eu luctus sapien mi vel leo. Maecenas tellus ante,
+        pellentesque id congue ut, auctor rhoncus nibh. Aliquam malesuada est vel dolor mollis,
+        sit amet ultricies nulla tincidunt. Nulla et consequat nisl, in rutrum risus. Maecenas ac
+        odio eget erat dictum tristique. Phasellus ultricies semper nunc, quis iaculis tortor porta
+        eu.
+    </string>
+</resources>
