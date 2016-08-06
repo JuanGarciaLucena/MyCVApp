@@ -3,6 +3,9 @@ package emebesoft.com.mycvapp;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -10,11 +13,12 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+import fragments.PresentationFragment;
+
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +38,7 @@ public class MainActivity extends AppCompatActivity
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.setDrawerListener(toggle);
+        drawer.addDrawerListener(toggle);
         toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
@@ -73,19 +77,28 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_presentation) {
-            // Handle the camera action
+            Toast.makeText(MainActivity.this, "Item seleccionado:" + item.getTitle(), Toast.LENGTH_SHORT).show();
+
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.contentFrame, new PresentationFragment()); // f1_container is your FrameLayout container
+            ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+            ft.addToBackStack(null);
+            ft.commit();
         } else if (id == R.id.nav_experience) {
-
+            Toast.makeText(MainActivity.this, "Item seleccionado:" + item.getTitle(), Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_tech) {
-
+            Toast.makeText(MainActivity.this, "Item seleccionado:" + item.getTitle(), Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_projects) {
-
+            Toast.makeText(MainActivity.this, "Item seleccionado:" + item.getTitle(), Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_personal) {
-
+            Toast.makeText(MainActivity.this, "Item seleccionado:" + item.getTitle(), Toast.LENGTH_SHORT).show();
         }
+
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
+
         return true;
     }
 }
