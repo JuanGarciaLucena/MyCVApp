@@ -5,7 +5,6 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -14,9 +13,12 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.widget.Toast;
 
+import fragments.ExperienceFragment;
+import fragments.PersonalFragment;
 import fragments.PresentationFragment;
+import fragments.ProjectsFragment;
+import fragments.TechFragment;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -43,6 +45,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        navigationView.getMenu().getItem(0).setChecked(true);
+        onNavigationItemSelected(navigationView.getMenu().getItem(0));
     }
 
     @Override
@@ -75,26 +79,24 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
+        Fragment fragment = null;
+        FragmentManager fragmentManager = getSupportFragmentManager();
 
         if (id == R.id.nav_presentation) {
-            Toast.makeText(MainActivity.this, "Item seleccionado:" + item.getTitle(), Toast.LENGTH_SHORT).show();
-
-            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-            ft.replace(R.id.contentFrame, new PresentationFragment()); // f1_container is your FrameLayout container
-            ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
-            ft.addToBackStack(null);
-            ft.commit();
+            fragment = new PresentationFragment();
         } else if (id == R.id.nav_experience) {
-            Toast.makeText(MainActivity.this, "Item seleccionado:" + item.getTitle(), Toast.LENGTH_SHORT).show();
+            fragment = new ExperienceFragment();
         } else if (id == R.id.nav_tech) {
-            Toast.makeText(MainActivity.this, "Item seleccionado:" + item.getTitle(), Toast.LENGTH_SHORT).show();
+            fragment = new TechFragment();
         } else if (id == R.id.nav_projects) {
-            Toast.makeText(MainActivity.this, "Item seleccionado:" + item.getTitle(), Toast.LENGTH_SHORT).show();
+            fragment = new ProjectsFragment();
         } else if (id == R.id.nav_personal) {
-            Toast.makeText(MainActivity.this, "Item seleccionado:" + item.getTitle(), Toast.LENGTH_SHORT).show();
+            fragment = new PersonalFragment();
         }
 
-
+        fragmentManager.beginTransaction()
+                .replace(R.id.contentFrame, fragment)
+                .commit();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

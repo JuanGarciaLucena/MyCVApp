@@ -11,16 +11,48 @@
     <string name="projects">Proyectos</string>
     <string name="dev_name">Juan Lucena</string>
     <string name="dev_mail">JuanGarciaLucena@gmail.com</string>
-    <string name="text_presentation">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-        quis aliquam metus. Fusce molestie id magna vitae euismod. Mauris at ex nec urna varius
-        mollis at at purus. Pellentesque non dapibus ex. Aenean aliquam eu quam consectetur auctor.
-        Ut accumsan tellus eget risus malesuada, ac laoreet sapien hendrerit. Cras pretium cursus
-        bibendum. Suspendisse elementum, lorem quis interdum posuere, quam odio pretium dui, quis
-        elementum turpis dolor convallis mauris. Suspendisse rhoncus, leo bibendum elementum
-        vulputate, erat augue interdum urna, eu luctus sapien mi vel leo. Maecenas tellus ante,
-        pellentesque id congue ut, auctor rhoncus nibh. Aliquam malesuada est vel dolor mollis,
-        sit amet ultricies nulla tincidunt. Nulla et consequat nisl, in rutrum risus. Maecenas ac
-        odio eget erat dictum tristique. Phasellus ultricies semper nunc, quis iaculis tortor porta
-        eu.
+    <string name="presentation_text">
+        <![CDATA[
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec libero orci, rutrum vel
+            ultricies vitae, maximus et libero. Duis blandit diam vitae vulputate vulputate. Vivamus
+            in erat imperdiet, accumsan mi vitae, feugiat turpis. Curabitur auctor facilisis lorem,
+            in rutrum dui iaculis eu. Class aptent taciti sociosqu ad litora torquent per conubia
+            nostra, per inceptos himenaeos. Vestibulum commodo pulvinar vestibulum. In fermentum
+            metus eleifend eros suscipit, ac porta quam volutpat. Curabitur eget libero mi. Nam
+            tristique urna a porttitor placerat. Fusce et elit mi. Aliquam sit amet venenatis eros.
+            Duis et dictum orci. Nullam placerat cursus leo, non fringilla lacus porta id.</p>
+
+        <p> Quisque tellus neque, congue condimentum tincidunt eu, vestibulum non tortor. Fusce
+            facilisis hendrerit diam, id tincidunt tortor. Donec semper non diam at rhoncus.
+            Curabitur magna purus, vulputate quis nisl vel, cursus lobortis leo. Pellentesque
+            pharetra arcu sem, a fermentum mauris dignissim eget. Sed ut tincidunt nibh.
+            Pellentesque pulvinar ullamcorper orci id auctor. Sed nec turpis erat. Aliquam erat
+            volutpat. Sed erat lacus, gravida non eros vitae, maximus accumsan metus.
+            Pellentesque sit amet nisi posuere, euismod elit eu, blandit turpis. Quisque ac
+            accumsan augue. Sed dapibus blandit sapien eleifend tincidunt. Sed tristique nisl
+            risus, sit amet sodales ipsum pretium quis.</p>
+
+        <p> Aenean semper orci nunc, eget auctor neque consectetur ut. Integer a tellus congue,
+            blandit justo quis, egestas elit. Donec euismod, lorem non iaculis hendrerit, nibh
+            leo convallis nibh, vitae lacinia massa neque eget sem. Praesent elementum elementum
+            faucibus. Vivamus sagittis dui vitae accumsan dapibus. Nunc eu porttitor magna, sed
+            viverra sem. Morbi non mauris efficitur ipsum tristique porttitor. Etiam scelerisque
+            nec eros ut egestas. Praesent at arcu suscipit, sagittis mauris vel, posuere augue.
+            Nulla ac dolor felis.</p>
+
+        <p> Mauris eu leo eleifend, pretium ligula nec, porttitor quam. Pellentesque habitant
+            morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras blandit,
+            massa ut pretium consequat, lectus lorem vulputate magna, quis pretium dolor sem et
+            ex. Quisque dictum risus cursus enim gravida porta. Etiam posuere magna eget mi
+            placerat semper. Integer nec nisi rhoncus, facilisis tortor nec, congue neque.
+            Praesent tincidunt arcu ut nulla iaculis semper.</p>
+
+        <p> Integer efficitur, urna in ornare vestibulum, magna velit vehicula justo, non
+            ultrices nisi metus vitae erat. Etiam justo dui, commodo in orci non, tempor
+            volutpat quam. Nullam vehicula lectus ac magna aliquet, vitae placerat risus
+            feugiat. Cras egestas sem euismod leo hendrerit imperdiet. Fusce et tortor quis mi
+            aliquet tempor quis quis tellus. Nunc scelerisque nec dui id scelerisque. In
+            imperdiet, magna in pulvinar tempus, metus urna luctus nisl, ut euismod lorem quam
+            eget orci.</p>]]>
     </string>
 </resources>

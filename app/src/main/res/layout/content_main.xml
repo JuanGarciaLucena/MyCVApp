@@ -11,8 +11,7 @@
     <FrameLayout
         android:id="@+id/contentFrame"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@android:color/holo_purple">
+        android:layout_height="match_parent">
 
     </FrameLayout>
 

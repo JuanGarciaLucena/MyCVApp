@@ -3,4 +3,13 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <!-- Demo colors -->
+    <color name="demo_color_red">#f7325f</color>
+    <color name="demo_color_blue">#0007ef</color>
+    <color name="demo_color_yellow">#f7c282</color>
+    <color name="demo_color_green">#8b8b8b</color>
+    <color name="demo_color_purple">#7A5CFE</color>
+
+
 </resources>
