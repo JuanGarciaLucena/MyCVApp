@@ -4,11 +4,20 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:padding="10dp"
     android:gravity="center">
 
     <ImageView
         android:id="@+id/logoCompany"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/nameCompany"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textSize="20sp"
+        android:gravity="center"/>
 
 </LinearLayout>

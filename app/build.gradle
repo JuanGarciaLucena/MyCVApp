@@ -25,4 +25,8 @@ dependencies {
     compile 'com.android.support:appcompat-v7:24.0.0'
     compile 'com.android.support:support-v4:24.0.0'
     compile 'com.android.support:design:24.0.0'
+    compile 'com.yqritc:recyclerview-flexibledivider:1.4.0'
+    compile 'com.github.satyan:sugar:1.4'
+    compile 'com.jakewharton:butterknife:8.4.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
 }

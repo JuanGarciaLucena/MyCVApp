@@ -55,4 +55,53 @@
             imperdiet, magna in pulvinar tempus, metus urna luctus nisl, ut euismod lorem quam
             eget orci.</p>]]>
     </string>
+
+    <string name="experience_detail_viavansi">
+        <![CDATA[
+        <p> Durante mi etapa en Viavansi estuve probando diferentes frameworks HTML5 tales como
+            Sencha Touch, PhoneGap y Appcelerator, siendo este último con el que desarrollamos una
+            agenda corporativa para una importante empresa de seguros.</p>
+
+        <p> Para esta empresa estuve trabajando un año junto a un compañero más contratado en
+            prácticas y lo estuve compaginando con mi proyecto de fin de carrera dado que aún no
+            había acabado la carrera.</p>]]>
+    </string>
+
+    <string name="experience_detail_clc">
+        <![CDATA[
+        <p> Para cobre las cruces estuve trabajando un total de seis meses dado que estuve
+            trabajando con un contrato en prácticas tal y como hice en <b>VIAVANSI</b>.</p>
+
+        <p> Mis funciones en este puesto era el de administrar un sistema <b>SCADA</b>
+            (de PI SYSTEM) y generar una serie de soluciones para el departamento de control de
+            procesos de la mina.</p>]]>
+    </string>
+
+    <string name="experience_detail_elitechlab">
+        <![CDATA[
+        <p> Durante mi estancia en <b>ELITECH LAB</B> fui el único programador android que había
+            en la empresa y estuve involucrado en proyectos tanto a nivel híbrido como a nivel
+            nativo. Durante este periodo pude mejorar mis habilidades como desarrollador android
+            dado que  al trabajar solo debía encontrar las soluciones a todos los problemas por mi
+            mismo, lo cual me hizo mucho mejorar como profesional.</p>]]>
+    </string>
+
+    <string name="experience_detail_realcom">
+        <![CDATA[
+        <p> Mi contrato con <b>REALCOM</b> solo fue de dos meses dado que me contrataron para
+            mejorar y  mantener una aplicación destinada a las elecciones municipales de 2015. Mi
+            trabajo consistió en arreglar una serie de bugs y añadir un sistema de notificaciones
+            a la aplicación.</p>
+
+        <p> Aunque mi estancia en <b>REALCOM</b> fue corta, me sirvió para, por primera vez,
+            trabajar como mantenedor de código ya escrito.</p>]]>
+    </string>
+
+    <string name="experience_detail_oneeurope">
+        <![CDATA[
+        <p> <b>1EEUROPE</b> es una empresa alemana afincada en Stuttgart pero con sede en Sevilla.
+        Para esta empresa he trabajado casi un año en un equipo de dos desarrolladores android,
+        dedicando nuestro tiempo de trabajo a mantener, arreglar y añadir funcionalidades al
+        proyecto AppyShopper así como desarrollar nuevas aplicaciones.</p>]]>
+    </string>
 </resources>

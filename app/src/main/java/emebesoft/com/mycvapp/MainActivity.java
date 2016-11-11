@@ -14,11 +14,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
+import com.orm.SugarContext;
+
+import java.util.List;
+
 import fragments.ExperienceFragment;
 import fragments.PersonalFragment;
 import fragments.PresentationFragment;
 import fragments.ProjectsFragment;
 import fragments.TechFragment;
+import objects.ExperienceObject;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -28,6 +33,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        initDB();
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -102,5 +109,28 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawer.closeDrawer(GravityCompat.START);
 
         return true;
+    }
+
+    public void initDB(){
+
+
+        SugarContext.init(MainActivity.this);
+
+        List<ExperienceObject> experienceObjectList = ExperienceObject.findWithQuery(ExperienceObject.class, "Select * from experience_object");
+        if(experienceObjectList.isEmpty()){
+
+            ExperienceObject experienceObject1 = new ExperienceObject(0, "1eEurope", "Septiembre 2015", "Agosto 2016", "Android developer", getResources().getString(R.string.experience_detail_oneeurope));
+            ExperienceObject experienceObject2 = new ExperienceObject(1, "Realcom", "Junio 2015", "Junio 2015", "Android developer", getResources().getString(R.string.experience_detail_realcom));
+            ExperienceObject experienceObject3 = new ExperienceObject(2, "Elitech Lab", "Febrero 2014", "Marzo 2015", "Android developer", getResources().getString(R.string.experience_detail_elitechlab));
+            ExperienceObject experienceObject4 = new ExperienceObject(3, "Cobre las Cruces", "Julio 2013", "Enero 2014", "SCADA Admin", getResources().getString(R.string.experience_detail_clc));
+            ExperienceObject experienceObject5 = new ExperienceObject(4, "Viavansi", "Enero 2012", "Enero 2013", "Android developer", getResources().getString(R.string.experience_detail_viavansi));
+
+            experienceObject1.save();
+            experienceObject2.save();
+            experienceObject3.save();
+            experienceObject4.save();
+            experienceObject5.save();
+            SugarContext.terminate();
+        }
     }
 }

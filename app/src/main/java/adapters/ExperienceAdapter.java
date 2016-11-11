@@ -9,7 +9,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
+import java.util.List;
 
 import emebesoft.com.mycvapp.R;
 import objects.ExperienceObject;
@@ -20,25 +23,20 @@ import objects.ExperienceObject;
 public class ExperienceAdapter extends RecyclerView.Adapter<ExperienceAdapter.ExperienceObjectViewHolder> implements View.OnClickListener{
 
     private View.OnClickListener listener;
-    private ArrayList<ExperienceObject> data;
+    private List<ExperienceObject> data;
 
-    public ExperienceAdapter(ArrayList<ExperienceObject> data){
+    public ExperienceAdapter(List<ExperienceObject> data){
         this.data = data;
     }
 
 
     public static class ExperienceObjectViewHolder extends RecyclerView.ViewHolder {
 
-        //private TextView tvCompanyName;
-
         public ExperienceObjectViewHolder(View itemView) {
             super(itemView);
-            //tvCompanyName = (TextView)itemView.findViewById(R.id.tvCompanyName);
-
         }
 
         public void bindTitular(ExperienceObject experienceObject) {
-            //tvCompanyName.setText(experienceObject.getCompanyName());
         }
     }
 
@@ -47,7 +45,7 @@ public class ExperienceAdapter extends RecyclerView.Adapter<ExperienceAdapter.Ex
     public ExperienceAdapter.ExperienceObjectViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.adapter_experience, parent, false);
-
+        itemView.setOnClickListener(this);
         ExperienceObjectViewHolder experienceObjectViewHolder = new ExperienceObjectViewHolder(itemView);
 
         return experienceObjectViewHolder;
@@ -62,23 +60,22 @@ public class ExperienceAdapter extends RecyclerView.Adapter<ExperienceAdapter.Ex
         holder.bindTitular(item);
 
         ImageView logoCompany = (ImageView)holder.itemView.findViewById(R.id.logoCompany);
+        TextView nameCompany = (TextView)holder.itemView.findViewById(R.id.nameCompany);
+        nameCompany.setText(item.getCompanyName());
 
         if(position == 0) {
             logoCompany.setImageDrawable(context.getDrawable(R.drawable.logo_oneeurope));
-            holder.itemView.setBackgroundColor(ContextCompat.getColor(context, R.color.demo_color_blue));
         }else if(position == 1){
             logoCompany.setImageDrawable(context.getDrawable(R.drawable.logo_realcom));
-            holder.itemView.setBackgroundColor(ContextCompat.getColor(context, R.color.demo_color_purple));
         }else if(position == 2){
             logoCompany.setImageDrawable(context.getDrawable(R.drawable.logo_elitechlab));
-            holder.itemView.setBackgroundColor(ContextCompat.getColor(context, R.color.demo_color_yellow));
         }else if(position == 3){
             logoCompany.setImageDrawable(context.getDrawable(R.drawable.logo_clc));
-            holder.itemView.setBackgroundColor(ContextCompat.getColor(context, R.color.demo_color_green));
         }else if(position == 4){
             logoCompany.setImageDrawable(context.getDrawable(R.drawable.logo_viavansi));
-            holder.itemView.setBackgroundColor(ContextCompat.getColor(context, R.color.demo_color_red));
         }
+
+
 
     }
 
@@ -87,8 +84,13 @@ public class ExperienceAdapter extends RecyclerView.Adapter<ExperienceAdapter.Ex
         return data.size();
     }
 
+    public void setOnClickListener(View.OnClickListener listener) {
+        this.listener = listener;
+    }
+
     @Override
     public void onClick(View view) {
-
+        if(listener != null)
+            listener.onClick(view);
     }
 }
