@@ -1,16 +1,18 @@
 package fragments;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.dgreenhalgh.android.simpleitemdecoration.linear.DividerItemDecoration;
 import com.orm.SugarContext;
-import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 import java.util.List;
 import adapters.ExperienceAdapter;
 import emebesoft.com.mycvapp.ExperienceDetailActivity;
@@ -34,7 +36,8 @@ public class ExperienceFragment extends Fragment {
         SugarContext.terminate();
 
         recyclerView = (RecyclerView)fragmentView.findViewById(R.id.RecView);
-        recyclerView.addItemDecoration(new HorizontalDividerItemDecoration.Builder(getContext()).build());
+        Drawable dividerDrawable = ContextCompat.getDrawable(getContext(), R.drawable.divider_horizontal_recycler_view);
+        recyclerView.addItemDecoration(new DividerItemDecoration(dividerDrawable));
         recyclerView.setHasFixedSize(true);
 
         final ExperienceAdapter experienceAdapter = new ExperienceAdapter(experienceObjectList);

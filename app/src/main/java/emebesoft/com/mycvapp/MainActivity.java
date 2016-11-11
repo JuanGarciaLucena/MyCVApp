@@ -24,6 +24,7 @@ import fragments.PresentationFragment;
 import fragments.ProjectsFragment;
 import fragments.TechFragment;
 import objects.ExperienceObject;
+import objects.TechObject;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -116,7 +117,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         SugarContext.init(MainActivity.this);
 
-        List<ExperienceObject> experienceObjectList = ExperienceObject.findWithQuery(ExperienceObject.class, "Select * from experience_object");
+        List<ExperienceObject> experienceObjectList = ExperienceObject.findWithQuery(ExperienceObject.class, "SELECT * FROM experience_object");
         if(experienceObjectList.isEmpty()){
 
             ExperienceObject experienceObject1 = new ExperienceObject(0, "1eEurope", "Septiembre 2015", "Agosto 2016", "Android developer", getResources().getString(R.string.experience_detail_oneeurope));
@@ -130,7 +131,33 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             experienceObject3.save();
             experienceObject4.save();
             experienceObject5.save();
-            SugarContext.terminate();
         }
+
+        List<TechObject> techObjectList = TechObject.findWithQuery(TechObject.class, "SELECT * FROM tech_object");
+        if(techObjectList.isEmpty()){
+            TechObject techObject1 = new TechObject("Android");
+            TechObject techObject2 = new TechObject("Android Studio");
+            TechObject techObject3 = new TechObject("Appcelerator");
+            TechObject techObject4 = new TechObject("CSS3");
+            TechObject techObject5 = new TechObject("Eclipse");
+            TechObject techObject6 = new TechObject("HTML5");
+            TechObject techObject7 = new TechObject("Java");
+            TechObject techObject8 = new TechObject("Javascript");
+            TechObject techObject9 = new TechObject("PhoneGap");
+            TechObject techObject10 = new TechObject("Sencha");
+
+            techObject1.save();
+            techObject2.save();
+            techObject3.save();
+            techObject4.save();
+            techObject5.save();
+            techObject6.save();
+            techObject7.save();
+            techObject8.save();
+            techObject9.save();
+            techObject10.save();
+        }
+
+        SugarContext.terminate();
     }
 }
