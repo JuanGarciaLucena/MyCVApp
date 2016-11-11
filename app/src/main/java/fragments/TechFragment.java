@@ -9,12 +9,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import com.dgreenhalgh.android.simpleitemdecoration.grid.GridDividerItemDecoration;
 import com.orm.SugarContext;
-
 import adapters.TechAdapter;
-import butterknife.ButterKnife;
 import emebesoft.com.mycvapp.R;
 import objects.TechObject;
 
@@ -29,7 +26,6 @@ public class TechFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View fragmentView = inflater.inflate(R.layout.fragment_tech, container, false);
-        ButterKnife.bind(getActivity());
 
         techRecyclerView = (RecyclerView)fragmentView.findViewById(R.id.techRecyclerView);
         Drawable horizontalDivider = ContextCompat.getDrawable(getContext(), R.drawable.divider_horizontal_recycler_view);

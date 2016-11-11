@@ -100,8 +100,81 @@
     <string name="experience_detail_oneeurope">
         <![CDATA[
         <p> <b>1EEUROPE</b> es una empresa alemana afincada en Stuttgart pero con sede en Sevilla.
-        Para esta empresa he trabajado casi un año en un equipo de dos desarrolladores android,
-        dedicando nuestro tiempo de trabajo a mantener, arreglar y añadir funcionalidades al
-        proyecto AppyShopper así como desarrollar nuevas aplicaciones.</p>]]>
+            Para esta empresa he trabajado casi un año en un equipo de dos desarrolladores android,
+            dedicando nuestro tiempo de trabajo a mantener, arreglar y añadir funcionalidades al
+            proyecto AppyShopper así como desarrollar nuevas aplicaciones.</p>]]>
     </string>
+
+    <string name="project_pfc">
+        <![CDATA[
+        <p> Proyecto consistente en la realización de una agenda basada en geolocalización para
+            plataformas Android, consistente en un recordatorio de eventos y ruta a seguir, desde
+            la posición actual, para llegar al lugar de celebración de dicho evento.</p>]]>
+    </string>
+
+    <string name="project_viafirma">
+        <![CDATA[
+        <p> Gestor de documentos para plataformas Android e iOS, en el que el usuario recibe
+            documentos para firmar y sean devueltos una vez firmados. Se puede firmar tanto por
+            firma digital como por certificados que estén instalados en el dispositivo.</p>]]>
+    </string>
+
+    <string name="project_directorio_corporativo">
+        <![CDATA[
+        <p> Desarrollo del directorio corporativo móvil para Mapfre, para plataformas Android e
+            iOS, en el cual se puede encontrar toda la información referente a los trabajadores de
+            la empresa, departamentos etc. Se pueden crear tarjetas de visitas, guardar contactos
+            directamente a la agenda del teléfono o mandar sms a personas o grupos. Para este
+            proyecto también se desarrolló un dashboard para Android dado que no hay componente
+            nativo para esta plataforma.</p>]]>
+    </string>
+
+    <string name="project_flora_fauna">
+        <![CDATA[
+        <p> Proyecto realizado para el gobierno de Gibraltar consistente en una enciclopedia de la
+            fauna y flora de Gibraltar con secciones especiales para niños así como juegos.</p>]]>
+    </string>
+
+    <string name="project_gibelec">
+        <![CDATA[
+        <p> Este proyecto se desarrolló para la compañía eléctrica de Gibraltar que al igual que
+            el anterior proyecto depende del gobierno de Gibraltar.</p>
+
+        <p> Consiste en una aplicación en la que se puede obtener todo tipo de información acerca
+            de la compañía, contactar con el servicio técnico en caso de avería o consultar en un
+            mapa las zonas que estaban siendo afectadas por algún tipo de avería.</p>]]>
+    </string>
+
+    <string name="project_smart_hospitality_solution">
+        <![CDATA[
+        <p> Proyecto realizado para tablets Android. Consiste en una solución de turismo para
+            hoteles. Se ha desarrollado un launcher y 6 aplicaciones temáticas que ayudan al
+            turista a poder desenvolverse durante su estancia en la ciudad de destino.</p>]]>
+    </string>
+
+    <string name="project_opyno">
+        <![CDATA[
+        <p> Un proyecto que consiste en la realización de diversas tareas (Encuestas, fotografías
+            o video) para que las marcas que contraten el servicio puedan conocer en tiempo real
+            el grado de satisfacción de los clientes para con sus productos.</p>]]>
+    </string>
+
+    <string name="project_dialoga">
+        <![CDATA[
+        <p> Proyecto para las elecciones municipales de mayo de 2015. Entre sus funciones destacan
+            la posibilidad de realizar el escrutinio de las elecciones en tiempo real, servicio de
+            notificaciones y consulta del censo de cada mesa electoral. Mi trabajo consistió en el
+            mantenimiento y la adición de nuevas características como el anteriormente mencionado
+            sistema de notificaciones.</p>]]>
+    </string>
+
+    <string name="project_appyshopper">
+        <![CDATA[
+        <p> Appyshopper es una solución que permite generar aplicaciones android de forma
+            automática cambiando solo la dirección del backend. Mi labor consiste en el
+            mantenimiento y desarrollo de nuevas funcionalidades. Hasta la fecha se han añadido
+            varias funcionalidades como sección de noticias y la galería de imágenes asi como
+            arreglar todos los bugs que van surgiendo.</p>]]>
+    </string>
+
 </resources>

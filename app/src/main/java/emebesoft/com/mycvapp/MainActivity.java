@@ -24,6 +24,7 @@ import fragments.PresentationFragment;
 import fragments.ProjectsFragment;
 import fragments.TechFragment;
 import objects.ExperienceObject;
+import objects.ProjectObject;
 import objects.TechObject;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -156,6 +157,29 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             techObject8.save();
             techObject9.save();
             techObject10.save();
+        }
+
+        List<ProjectObject> projectObjectList = TechObject.findWithQuery(ProjectObject.class, "SELECT * FROM project_object");
+        if(projectObjectList.isEmpty()){
+            ProjectObject projectObject1 = new ProjectObject(0, "Appyshopper", getResources().getString(R.string.project_appyshopper), "2016", "1eEurope");
+            ProjectObject projectObject2 = new ProjectObject(1, "Dialoga D3", getResources().getString(R.string.project_dialoga), "2015", "Realcom");
+            ProjectObject projectObject3 = new ProjectObject(2, "Opyno", getResources().getString(R.string.project_opyno), "2015", "Elitech Lab");
+            ProjectObject projectObject4 = new ProjectObject(3, "Smart Hospitality Solution", getResources().getString(R.string.project_smart_hospitality_solution), "2015", "Elitech Lab");
+            ProjectObject projectObject5 = new ProjectObject(4, "Gibelec", getResources().getString(R.string.project_gibelec), "2014", "Elitech Lab");
+            ProjectObject projectObject6 = new ProjectObject(5, "Gibraltar Fauna & Flora", getResources().getString(R.string.project_flora_fauna), "2014", "Elitech Lab");
+            ProjectObject projectObject7 = new ProjectObject(6, "Viafirma Inbox Mobile", getResources().getString(R.string.project_viafirma), "2012", "Viavansi");
+            ProjectObject projectObject8 = new ProjectObject(7, "Directorio Corporativo", getResources().getString(R.string.project_directorio_corporativo), "2012", "Viavansi");
+            ProjectObject projectObject9 = new ProjectObject(8, "Proyecto de Fin de Carrera", getResources().getString(R.string.project_pfc), "2012", "Universidad de Sevilla");
+
+            projectObject1.save();
+            projectObject2.save();
+            projectObject3.save();
+            projectObject4.save();
+            projectObject5.save();
+            projectObject6.save();
+            projectObject7.save();
+            projectObject8.save();
+            projectObject9.save();
         }
 
         SugarContext.terminate();
