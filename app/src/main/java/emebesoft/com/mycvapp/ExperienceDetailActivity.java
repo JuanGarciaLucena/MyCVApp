@@ -58,10 +58,11 @@ public class ExperienceDetailActivity extends AppCompatActivity {
             ExperienceObject experienceObject = ExperienceObject.findWithQuery(ExperienceObject.class, query, Integer.toString(experienceID)).get(0);
             SugarContext.terminate();
 
-            toolbarTitle.setText(experienceObject.getCompanyName());
-            experienceDetailPeriodTextView.setText(experienceObject.getDateFrom() + " - " + experienceObject.getDateTo());
-
             if(experienceObject != null){
+
+                toolbarTitle.setText(experienceObject.getCompanyName());
+                experienceDetailPeriodTextView.setText(experienceObject.getDateFrom() + " - " + experienceObject.getDateTo());
+
                 if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
                     experienceDescriptionTextView.setText(Html.fromHtml(experienceObject.getExperienceDescription(), Html.FROM_HTML_MODE_LEGACY));
                 } else {

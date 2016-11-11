@@ -13,47 +13,33 @@
     <string name="dev_mail">JuanGarciaLucena@gmail.com</string>
     <string name="presentation_text">
         <![CDATA[
-        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec libero orci, rutrum vel
-            ultricies vitae, maximus et libero. Duis blandit diam vitae vulputate vulputate. Vivamus
-            in erat imperdiet, accumsan mi vitae, feugiat turpis. Curabitur auctor facilisis lorem,
-            in rutrum dui iaculis eu. Class aptent taciti sociosqu ad litora torquent per conubia
-            nostra, per inceptos himenaeos. Vestibulum commodo pulvinar vestibulum. In fermentum
-            metus eleifend eros suscipit, ac porta quam volutpat. Curabitur eget libero mi. Nam
-            tristique urna a porttitor placerat. Fusce et elit mi. Aliquam sit amet venenatis eros.
-            Duis et dictum orci. Nullam placerat cursus leo, non fringilla lacus porta id.</p>
+        <p> Soy Juan Antonio y desde hoy lanzo una primera versión de mi CV como aplicación para
+            android.</p>
 
-        <p> Quisque tellus neque, congue condimentum tincidunt eu, vestibulum non tortor. Fusce
-            facilisis hendrerit diam, id tincidunt tortor. Donec semper non diam at rhoncus.
-            Curabitur magna purus, vulputate quis nisl vel, cursus lobortis leo. Pellentesque
-            pharetra arcu sem, a fermentum mauris dignissim eget. Sed ut tincidunt nibh.
-            Pellentesque pulvinar ullamcorper orci id auctor. Sed nec turpis erat. Aliquam erat
-            volutpat. Sed erat lacus, gravida non eros vitae, maximus accumsan metus.
-            Pellentesque sit amet nisi posuere, euismod elit eu, blandit turpis. Quisque ac
-            accumsan augue. Sed dapibus blandit sapien eleifend tincidunt. Sed tristique nisl
-            risus, sit amet sodales ipsum pretium quis.</p>
+        <p> Hasta ahora solía enviar mi CV en un pdf cada vez que alguna empresa me lo pedía pero
+            hace tiempo me di cuenta que sería una forma bastante acertada y original el realizar mi
+            propio CV en una aplicación android, pudiéndose ver de una forma más dinámica y
+            original.</p>
 
-        <p> Aenean semper orci nunc, eget auctor neque consectetur ut. Integer a tellus congue,
-            blandit justo quis, egestas elit. Donec euismod, lorem non iaculis hendrerit, nibh
-            leo convallis nibh, vitae lacinia massa neque eget sem. Praesent elementum elementum
-            faucibus. Vivamus sagittis dui vitae accumsan dapibus. Nunc eu porttitor magna, sed
-            viverra sem. Morbi non mauris efficitur ipsum tristique porttitor. Etiam scelerisque
-            nec eros ut egestas. Praesent at arcu suscipit, sagittis mauris vel, posuere augue.
-            Nulla ac dolor felis.</p>
+        <p> Poco a poco iré añadiendo más funcionalidades así como un campo de pruebas donde el
+            interesado pueda ver por si mismo mis capacidades como desarrollador Android, por lo
+            tanto esta primera versión es solo una versión con lo más básico y destacado de mi
+            carrera profesional.</p>
 
-        <p> Mauris eu leo eleifend, pretium ligula nec, porttitor quam. Pellentesque habitant
-            morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras blandit,
-            massa ut pretium consequat, lectus lorem vulputate magna, quis pretium dolor sem et
-            ex. Quisque dictum risus cursus enim gravida porta. Etiam posuere magna eget mi
-            placerat semper. Integer nec nisi rhoncus, facilisis tortor nec, congue neque.
-            Praesent tincidunt arcu ut nulla iaculis semper.</p>
+        <p> Por otro lado soy un apasionado desarrollador Android al que le gusta estar siempre
+            a la última en lo que programación para estos dispositivos se refiere. Empecé a
+            desarrollar aplicaciones para Android hace ahora casi cuatro años y desde entonces
+            mis habilidades han mejorado sustancialmente hasta convertirme en un buen profesional,
+            fiable y totalmente capacitado en esta tecnología.</p>
 
-        <p> Integer efficitur, urna in ornare vestibulum, magna velit vehicula justo, non
-            ultrices nisi metus vitae erat. Etiam justo dui, commodo in orci non, tempor
-            volutpat quam. Nullam vehicula lectus ac magna aliquet, vitae placerat risus
-            feugiat. Cras egestas sem euismod leo hendrerit imperdiet. Fusce et tortor quis mi
-            aliquet tempor quis quis tellus. Nunc scelerisque nec dui id scelerisque. In
-            imperdiet, magna in pulvinar tempus, metus urna luctus nisl, ut euismod lorem quam
-            eget orci.</p>]]>
+        <p> He estado involucrado en multitud de proyectos y en todas las condiciones posibles,
+            desde empezar proyectos desde cero hasta mantener aplicaciones ya escritas tanto a
+            nivel individual como en equipo.</p>
+
+        <p> Finalmente, espero que les guste la aplicación y que disfruten de esta nueva forma
+            de ver un CV y si echan algo en falta o hay algún error no duden en contactarme.</p>
+
+        <p>Juan Lucena.</p>]]>
     </string>
 
     <string name="experience_detail_viavansi">

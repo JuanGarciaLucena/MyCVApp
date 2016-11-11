@@ -29,11 +29,14 @@ import objects.TechObject;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
+    private Toolbar toolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("Carta de presentación");
         setSupportActionBar(toolbar);
 
         initDB();
@@ -92,14 +95,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         FragmentManager fragmentManager = getSupportFragmentManager();
 
         if (id == R.id.nav_presentation) {
+            toolbar.setTitle("Carta de presentación");
             fragment = new PresentationFragment();
         } else if (id == R.id.nav_experience) {
+            toolbar.setTitle("Experiencia");
             fragment = new ExperienceFragment();
         } else if (id == R.id.nav_tech) {
+            toolbar.setTitle("Tecnologías");
             fragment = new TechFragment();
         } else if (id == R.id.nav_projects) {
+            toolbar.setTitle("Proyectos");
             fragment = new ProjectsFragment();
         } else if (id == R.id.nav_personal) {
+            toolbar.setTitle("Datos Personales");
             fragment = new PersonalFragment();
         }
 

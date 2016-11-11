@@ -1,5 +1,6 @@
 package fragments;
 
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -15,6 +16,7 @@ import com.dgreenhalgh.android.simpleitemdecoration.linear.DividerItemDecoration
 import com.orm.SugarContext;
 
 import adapters.ProjectAdapter;
+import emebesoft.com.mycvapp.ProjectDetailActivity;
 import emebesoft.com.mycvapp.R;
 import objects.ProjectObject;
 
@@ -41,6 +43,15 @@ public class ProjectsFragment extends Fragment{
         projectRecyclerView.setAdapter(projectAdapter);
         projectRecyclerView.setLayoutManager(new GridLayoutManager(getContext(), 1));
         projectRecyclerView.addItemDecoration(new DividerItemDecoration(horizontalDivider));
+
+        projectAdapter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), ProjectDetailActivity.class);
+                intent.putExtra("projectID", projectRecyclerView.getChildAdapterPosition(v));
+                startActivity(intent);
+            }
+        });
 
 
         return fragmentView;

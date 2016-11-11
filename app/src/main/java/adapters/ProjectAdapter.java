@@ -17,9 +17,10 @@ import objects.ProjectObject;
  * Created by Juan Lucena on 11/11/2016.
  */
 
-public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ProjectObjectViewHolder>{
+public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ProjectObjectViewHolder> implements View.OnClickListener{
 
     private List<ProjectObject> projectObjectList;
+    private View.OnClickListener listener;
 
     public ProjectAdapter(List<ProjectObject> projectObjectList){
         this.projectObjectList = projectObjectList;
@@ -38,6 +39,7 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ProjectO
     public ProjectAdapter.ProjectObjectViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.adapter_project, parent, false);
+        itemView.setOnClickListener(this);
         ProjectAdapter.ProjectObjectViewHolder projectObjectViewHolder = new ProjectAdapter.ProjectObjectViewHolder(itemView);
 
         return projectObjectViewHolder;
@@ -78,5 +80,15 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ProjectO
     @Override
     public int getItemCount() {
         return projectObjectList.size();
+    }
+
+    public void setOnClickListener(View.OnClickListener listener) {
+        this.listener = listener;
+    }
+
+    @Override
+    public void onClick(View view) {
+        if(listener != null)
+            listener.onClick(view);
     }
 }
