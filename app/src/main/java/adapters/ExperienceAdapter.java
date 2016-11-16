@@ -64,15 +64,15 @@ public class ExperienceAdapter extends RecyclerView.Adapter<ExperienceAdapter.Ex
         nameCompany.setText(item.getCompanyName());
 
         if(position == 0) {
-            logoCompany.setImageDrawable(context.getDrawable(R.drawable.logo_oneeurope));
+            logoCompany.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.logo_oneeurope));
         }else if(position == 1){
-            logoCompany.setImageDrawable(context.getDrawable(R.drawable.logo_realcom));
+            logoCompany.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.logo_realcom));
         }else if(position == 2){
-            logoCompany.setImageDrawable(context.getDrawable(R.drawable.logo_elitechlab));
+            logoCompany.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.logo_elitechlab));
         }else if(position == 3){
-            logoCompany.setImageDrawable(context.getDrawable(R.drawable.logo_clc));
+            logoCompany.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.logo_clc));
         }else if(position == 4){
-            logoCompany.setImageDrawable(context.getDrawable(R.drawable.logo_viavansi));
+            logoCompany.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.logo_viavansi));
         }
 
 

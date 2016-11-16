@@ -1,6 +1,7 @@
 package adapters;
 
 import android.content.Context;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -57,23 +58,23 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ProjectO
         projectNameTextView.setText(item.getProjectName());
 
         if(position == 0){
-            projectLogoImageView.setImageDrawable(context.getDrawable(R.drawable.ic_appyshopper));
+            projectLogoImageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_appyshopper));
         }else if(position == 1){
-            projectLogoImageView.setImageDrawable(context.getDrawable(R.drawable.ic_dialoga));
+            projectLogoImageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_dialoga));
         }else if(position == 2){
-            projectLogoImageView.setImageDrawable(context.getDrawable(R.drawable.ic_opyno));
+            projectLogoImageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_opyno));
         }else if(position == 3){
-            projectLogoImageView.setImageDrawable(context.getDrawable(R.drawable.ic_tourist_tab));
+            projectLogoImageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_tourist_tab));
         }else if(position == 4){
-            projectLogoImageView.setImageDrawable(context.getDrawable(R.drawable.ic_gibelec));
+            projectLogoImageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_gibelec));
         }else if(position == 5){
-            projectLogoImageView.setImageDrawable(context.getDrawable(R.drawable.ic_fauna_flora));
+            projectLogoImageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_fauna_flora));
         }else if(position == 6){
-            projectLogoImageView.setImageDrawable(context.getDrawable(R.drawable.ic_viafirma));
+            projectLogoImageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_viafirma));
         }else if(position == 7){
-            projectLogoImageView.setImageDrawable(context.getDrawable(R.drawable.ic_directorio));
+            projectLogoImageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_directorio));
         }else if(position == 8){
-            projectLogoImageView.setImageDrawable(context.getDrawable(R.drawable.ic_us));
+            projectLogoImageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_us));
         }
     }
 

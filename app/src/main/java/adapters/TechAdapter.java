@@ -1,6 +1,7 @@
 package adapters;
 
 import android.content.Context;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -53,25 +54,25 @@ public class TechAdapter extends RecyclerView.Adapter<TechAdapter.TechObjectView
         ImageView techLogoImageView = (ImageView)holder.itemView.findViewById(R.id.techLogoImageView);
 
         if(position == 0) {
-            techLogoImageView.setImageDrawable(context.getDrawable(R.drawable.ic_android));
+            techLogoImageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_android));
         }else if(position == 1){
-            techLogoImageView.setImageDrawable(context.getDrawable(R.drawable.ic_android_studio));
+            techLogoImageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_android_studio));
         }else if(position == 2){
-            techLogoImageView.setImageDrawable(context.getDrawable(R.drawable.ic_appcelerator));
+            techLogoImageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_appcelerator));
         }else if(position == 3){
-            techLogoImageView.setImageDrawable(context.getDrawable(R.drawable.ic_css));
+            techLogoImageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_css));
         }else if(position == 4){
-            techLogoImageView.setImageDrawable(context.getDrawable(R.drawable.ic_eclipse));
+            techLogoImageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_eclipse));
         }else if(position == 5){
-            techLogoImageView.setImageDrawable(context.getDrawable(R.drawable.ic_html));
+            techLogoImageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_html));
         }else if(position == 6){
-            techLogoImageView.setImageDrawable(context.getDrawable(R.drawable.ic_java));
+            techLogoImageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_java));
         }else if(position == 7){
-            techLogoImageView.setImageDrawable(context.getDrawable(R.drawable.ic_javascript));
+            techLogoImageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_javascript));
         }else if(position == 8){
-            techLogoImageView.setImageDrawable(context.getDrawable(R.drawable.ic_phonegap));
+            techLogoImageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_phonegap));
         }else if(position == 9){
-            techLogoImageView.setImageDrawable(context.getDrawable(R.drawable.ic_sencha));
+            techLogoImageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_sencha));
         }
 
     }

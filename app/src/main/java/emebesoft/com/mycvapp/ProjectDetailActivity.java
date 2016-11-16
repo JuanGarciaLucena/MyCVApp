@@ -1,6 +1,7 @@
 package emebesoft.com.mycvapp;
 
 import android.support.design.widget.Snackbar;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -40,23 +41,23 @@ public class ProjectDetailActivity extends AppCompatActivity {
         if(projectID != -1){
 
             if(projectID == 0){
-                projectLogoImageView.setImageDrawable(getDrawable(R.drawable.ic_appyshopper));
+                projectLogoImageView.setImageDrawable(ContextCompat.getDrawable(ProjectDetailActivity.this, R.drawable.ic_appyshopper));
             }else if(projectID == 1){
-                projectLogoImageView.setImageDrawable(getDrawable(R.drawable.ic_dialoga));
+                projectLogoImageView.setImageDrawable(ContextCompat.getDrawable(ProjectDetailActivity.this, R.drawable.ic_dialoga));
             }else if(projectID == 2){
-                projectLogoImageView.setImageDrawable(getDrawable(R.drawable.ic_opyno));
+                projectLogoImageView.setImageDrawable(ContextCompat.getDrawable(ProjectDetailActivity.this, R.drawable.ic_opyno));
             }else if(projectID == 3){
-                projectLogoImageView.setImageDrawable(getDrawable(R.drawable.ic_tourist_tab));
+                projectLogoImageView.setImageDrawable(ContextCompat.getDrawable(ProjectDetailActivity.this, R.drawable.ic_tourist_tab));
             }else if(projectID == 4){
-                projectLogoImageView.setImageDrawable(getDrawable(R.drawable.ic_gibelec));
+                projectLogoImageView.setImageDrawable(ContextCompat.getDrawable(ProjectDetailActivity.this, R.drawable.ic_gibelec));
             }else if(projectID == 5){
-                projectLogoImageView.setImageDrawable(getDrawable(R.drawable.ic_fauna_flora));
+                projectLogoImageView.setImageDrawable(ContextCompat.getDrawable(ProjectDetailActivity.this, R.drawable.ic_fauna_flora));
             }else if(projectID == 6){
-                projectLogoImageView.setImageDrawable(getDrawable(R.drawable.ic_viafirma));
+                projectLogoImageView.setImageDrawable(ContextCompat.getDrawable(ProjectDetailActivity.this, R.drawable.ic_viafirma));
             }else if(projectID == 7){
-                projectLogoImageView.setImageDrawable(getDrawable(R.drawable.ic_directorio));
+                projectLogoImageView.setImageDrawable(ContextCompat.getDrawable(ProjectDetailActivity.this, R.drawable.ic_directorio));
             }else if(projectID == 8){
-                projectLogoImageView.setImageDrawable(getDrawable(R.drawable.ic_us));
+                projectLogoImageView.setImageDrawable(ContextCompat.getDrawable(ProjectDetailActivity.this, R.drawable.ic_us));
             }
 
             SugarContext.init(ProjectDetailActivity.this);

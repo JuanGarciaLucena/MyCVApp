@@ -1,5 +1,6 @@
 package emebesoft.com.mycvapp;
 
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -42,15 +43,15 @@ public class ExperienceDetailActivity extends AppCompatActivity {
         if(experienceID != -1){
 
             if(experienceID == 0) {
-                logoCompany.setImageDrawable(getDrawable(R.drawable.logo_oneeurope));
+                logoCompany.setImageDrawable(ContextCompat.getDrawable(ExperienceDetailActivity.this, R.drawable.logo_oneeurope));
             }else if(experienceID == 1){
-                logoCompany.setImageDrawable(getDrawable(R.drawable.logo_realcom));
+                logoCompany.setImageDrawable(ContextCompat.getDrawable(ExperienceDetailActivity.this, R.drawable.logo_realcom));
             }else if(experienceID == 2){
-                logoCompany.setImageDrawable(getDrawable(R.drawable.logo_elitechlab));
+                logoCompany.setImageDrawable(ContextCompat.getDrawable(ExperienceDetailActivity.this, R.drawable.logo_elitechlab));
             }else if(experienceID == 3){
-                logoCompany.setImageDrawable(getDrawable(R.drawable.logo_clc));
+                logoCompany.setImageDrawable(ContextCompat.getDrawable(ExperienceDetailActivity.this, R.drawable.logo_clc));
             }else if(experienceID == 4){
-                logoCompany.setImageDrawable(getDrawable(R.drawable.logo_viavansi));
+                logoCompany.setImageDrawable(ContextCompat.getDrawable(ExperienceDetailActivity.this, R.drawable.logo_viavansi));
             }
 
             SugarContext.init(ExperienceDetailActivity.this);
