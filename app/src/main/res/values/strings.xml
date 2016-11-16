@@ -4,17 +4,20 @@
     <!-- Strings used in Manifest -->
     <string name="maps_api_key">AIzaSyA7IMtJ6smG4PNvgNFVuXxa1KV_PMAt1VA</string>
 
+    <!-- Strings used in MainActivity -->
+    <string name="presentation_letter_title">Carta de presentación</string>
+    <string name="contact_email">juangarcialucena@gmail.com</string>
+    <string name="contact_subject">Contacto desde la app</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_settings">Settings</string>
-
 
     <!-- Strings used in Navigation Bar -->
     <string name="presentation">Carta de presentación</string>
     <string name="experience">Experiencia</string>
     <string name="tech">Tecnologías</string>
-    <string name="personal">Datos Personales</string>
     <string name="projects">Proyectos</string>
+    <string name="personal">Datos Personales</string>
     <string name="test_field">Campo de Pruebas</string>
     <string name="dev_name">Juan A. García Lucena</string>
     <string name="dev_mail">JuanGarciaLucena@gmail.com</string>

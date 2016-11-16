@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("Carta de presentación");
+        toolbar.setTitle(getResources().getString(R.string.presentation_letter_title));
         setSupportActionBar(toolbar);
 
         initDB();
@@ -46,8 +46,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent (Intent.ACTION_VIEW , Uri.parse("mailto:" + "juangarcialucena@gmail.com"));
-                intent.putExtra(Intent.EXTRA_SUBJECT, "Contacto desde la app");
+                Intent intent = new Intent (Intent.ACTION_VIEW , Uri.parse("mailto:" + getResources().getString(R.string.contact_email)));
+                intent.putExtra(Intent.EXTRA_SUBJECT, getResources().getString(R.string.contact_subject));
                 startActivity(intent);
             }
         });
@@ -88,7 +88,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return super.onOptionsItemSelected(item);
     }
 
-    @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
@@ -97,19 +96,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         FragmentManager fragmentManager = getSupportFragmentManager();
 
         if (id == R.id.nav_presentation) {
-            toolbar.setTitle("Carta de presentación");
+            toolbar.setTitle(getResources().getString(R.string.presentation_letter_title));
             fragment = new PresentationFragment();
         } else if (id == R.id.nav_experience) {
-            toolbar.setTitle("Experiencia");
+            toolbar.setTitle(getResources().getString(R.string.experience));
             fragment = new ExperienceFragment();
         } else if (id == R.id.nav_tech) {
-            toolbar.setTitle("Tecnologías");
+            toolbar.setTitle(getResources().getString(R.string.tech));
             fragment = new TechFragment();
         } else if (id == R.id.nav_projects) {
-            toolbar.setTitle("Proyectos");
+            toolbar.setTitle(getResources().getString(R.string.projects));
             fragment = new ProjectsFragment();
         } else if (id == R.id.nav_test_field) {
-            toolbar.setTitle("Campo de pruebas");
+            toolbar.setTitle(getResources().getString(R.string.test_field));
             fragment = new TestFieldFragment();
         }
 
