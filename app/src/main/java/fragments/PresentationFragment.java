@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import emebesoft.com.mycvapp.R;
 
 /**
@@ -15,13 +17,15 @@ import emebesoft.com.mycvapp.R;
  */
 public class PresentationFragment extends Fragment {
 
+    @BindView(R.id.presentationTextView) TextView presentationTextView;
+
     @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View fragmentView = inflater.inflate(R.layout.fragment_presentation, container, false);
+        ButterKnife.bind(this, fragmentView);
 
         String presentationString = getContext().getResources().getString(R.string.presentation_text);
-        TextView presentationTextView = (TextView)fragmentView.findViewById(R.id.presentationTextView);
 
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
             presentationTextView.setText(Html.fromHtml(presentationString, Html.FROM_HTML_MODE_LEGACY));

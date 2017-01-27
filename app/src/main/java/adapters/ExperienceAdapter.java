@@ -14,6 +14,8 @@ import org.w3c.dom.Text;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import emebesoft.com.mycvapp.R;
 import objects.ExperienceObject;
 
@@ -32,8 +34,12 @@ public class ExperienceAdapter extends RecyclerView.Adapter<ExperienceAdapter.Ex
 
     public static class ExperienceObjectViewHolder extends RecyclerView.ViewHolder {
 
+        @BindView(R.id.logoCompany) ImageView logoCompany;
+        @BindView(R.id.nameCompany) TextView nameCompany;
+
         public ExperienceObjectViewHolder(View itemView) {
             super(itemView);
+            ButterKnife.bind(this, itemView);
         }
 
         public void bindTitular(ExperienceObject experienceObject) {
@@ -59,20 +65,18 @@ public class ExperienceAdapter extends RecyclerView.Adapter<ExperienceAdapter.Ex
         ExperienceObject item = data.get(position);
         holder.bindTitular(item);
 
-        ImageView logoCompany = (ImageView)holder.itemView.findViewById(R.id.logoCompany);
-        TextView nameCompany = (TextView)holder.itemView.findViewById(R.id.nameCompany);
-        nameCompany.setText(item.getCompanyName());
+        holder.nameCompany.setText(item.getCompanyName());
 
         if(position == 0) {
-            logoCompany.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.logo_oneeurope));
+            holder.logoCompany.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.logo_oneeurope));
         }else if(position == 1){
-            logoCompany.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.logo_realcom));
+            holder.logoCompany.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.logo_realcom));
         }else if(position == 2){
-            logoCompany.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.logo_elitechlab));
+            holder.logoCompany.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.logo_elitechlab));
         }else if(position == 3){
-            logoCompany.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.logo_clc));
+            holder.logoCompany.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.logo_clc));
         }else if(position == 4){
-            logoCompany.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.logo_viavansi));
+            holder.logoCompany.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.logo_viavansi));
         }
 
 

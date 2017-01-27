@@ -11,6 +11,8 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import emebesoft.com.mycvapp.R;
 import objects.ProjectObject;
 
@@ -28,8 +30,13 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ProjectO
     }
 
     public static class ProjectObjectViewHolder extends RecyclerView.ViewHolder {
+
+        @BindView(R.id.projectLogoImageView) ImageView projectLogoImageView;
+        @BindView(R.id.projectNameTextView) TextView projectNameTextView;
+
         public ProjectObjectViewHolder(View itemView) {
             super(itemView);
+            ButterKnife.bind(this, itemView);
         }
 
         public void bindTitular(ProjectObject projectObject) {
@@ -53,28 +60,26 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ProjectO
         ProjectObject item = projectObjectList.get(position);
         holder.bindTitular(item);
 
-        ImageView projectLogoImageView = (ImageView)holder.itemView.findViewById(R.id.projectLogoImageView);
-        TextView projectNameTextView = (TextView)holder.itemView.findViewById(R.id.projectNameTextView);
-        projectNameTextView.setText(item.getProjectName());
+        holder.projectNameTextView.setText(item.getProjectName());
 
         if(position == 0){
-            projectLogoImageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_appyshopper));
+            holder.projectLogoImageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_appyshopper));
         }else if(position == 1){
-            projectLogoImageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_dialoga));
+            holder.projectLogoImageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_dialoga));
         }else if(position == 2){
-            projectLogoImageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_opyno));
+            holder.projectLogoImageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_opyno));
         }else if(position == 3){
-            projectLogoImageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_tourist_tab));
+            holder.projectLogoImageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_tourist_tab));
         }else if(position == 4){
-            projectLogoImageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_gibelec));
+            holder.projectLogoImageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_gibelec));
         }else if(position == 5){
-            projectLogoImageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_fauna_flora));
+            holder.projectLogoImageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_fauna_flora));
         }else if(position == 6){
-            projectLogoImageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_viafirma));
+            holder.projectLogoImageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_viafirma));
         }else if(position == 7){
-            projectLogoImageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_directorio));
+            holder.projectLogoImageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_directorio));
         }else if(position == 8){
-            projectLogoImageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_us));
+            holder.projectLogoImageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_us));
         }
     }
 

@@ -24,6 +24,7 @@ public class ProjectDetailActivity extends AppCompatActivity {
     @BindView(R.id.projectCompanyDateTextView) TextView projectCompanyDateTextView;
     @BindView(R.id.projectDetailTextView) TextView projectDetailTextView;
     @BindView(R.id.toolbarTitle) TextView toolbarTitle;
+    @BindView(R.id.experienceToolbar) Toolbar experienceToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,8 +32,7 @@ public class ProjectDetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_project_detail);
         ButterKnife.bind(ProjectDetailActivity.this);
 
-        Toolbar projectToolbar = (Toolbar) findViewById(R.id.experienceToolbar);
-        setSupportActionBar(projectToolbar);
+        setSupportActionBar(experienceToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 

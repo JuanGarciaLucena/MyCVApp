@@ -10,6 +10,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import emebesoft.com.mycvapp.MapsActivity;
 import emebesoft.com.mycvapp.R;
 
@@ -20,24 +22,24 @@ import emebesoft.com.mycvapp.R;
 
 public class TestFieldFragment extends Fragment{
 
+    @BindView(R.id.testFieldListView) ListView testFieldListView;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View fragmentView = inflater.inflate(R.layout.fragment_test_field, container, false);
+        ButterKnife.bind(this, fragmentView);
 
-        ListView testFieldListView = (ListView)fragmentView.findViewById(R.id.testFieldListView);
         String[] data = getActivity().getResources().getStringArray(R.array.test_field_items);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_list_item_1, data);
         testFieldListView.setAdapter(adapter);
 
-        testFieldListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        testFieldListView.setOnItemClickListener((parent, view, position, id) -> {
                 if(position == 0){
                     startActivity(new Intent(getContext(), MapsActivity.class));
                 }
             }
-        });
+        );
 
         return fragmentView;
     }

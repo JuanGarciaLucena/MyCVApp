@@ -10,6 +10,8 @@ import android.widget.ImageView;
 
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import emebesoft.com.mycvapp.R;
 import objects.ExperienceObject;
 import objects.TechObject;
@@ -27,8 +29,12 @@ public class TechAdapter extends RecyclerView.Adapter<TechAdapter.TechObjectView
     }
 
     public static class TechObjectViewHolder extends RecyclerView.ViewHolder {
+
+        @BindView(R.id.techLogoImageView) ImageView techLogoImageView;
+
         public TechObjectViewHolder(View itemView) {
             super(itemView);
+            ButterKnife.bind(this, itemView);
         }
 
         public void bindTitular(TechObject techObject) {
@@ -51,28 +57,26 @@ public class TechAdapter extends RecyclerView.Adapter<TechAdapter.TechObjectView
         TechObject item = techObjectList.get(position);
         holder.bindTitular(item);
 
-        ImageView techLogoImageView = (ImageView)holder.itemView.findViewById(R.id.techLogoImageView);
-
         if(position == 0) {
-            techLogoImageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_android));
+            holder.techLogoImageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_android));
         }else if(position == 1){
-            techLogoImageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_android_studio));
+            holder.techLogoImageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_android_studio));
         }else if(position == 2){
-            techLogoImageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_appcelerator));
+            holder.techLogoImageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_appcelerator));
         }else if(position == 3){
-            techLogoImageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_css));
+            holder.techLogoImageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_css));
         }else if(position == 4){
-            techLogoImageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_eclipse));
+            holder.techLogoImageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_eclipse));
         }else if(position == 5){
-            techLogoImageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_html));
+            holder.techLogoImageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_html));
         }else if(position == 6){
-            techLogoImageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_java));
+            holder.techLogoImageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_java));
         }else if(position == 7){
-            techLogoImageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_javascript));
+            holder.techLogoImageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_javascript));
         }else if(position == 8){
-            techLogoImageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_phonegap));
+            holder.techLogoImageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_phonegap));
         }else if(position == 9){
-            techLogoImageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_sencha));
+            holder.techLogoImageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_sencha));
         }
 
     }

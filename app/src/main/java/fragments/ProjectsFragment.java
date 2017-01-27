@@ -16,6 +16,8 @@ import com.dgreenhalgh.android.simpleitemdecoration.linear.DividerItemDecoration
 import com.orm.SugarContext;
 
 import adapters.ProjectAdapter;
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import emebesoft.com.mycvapp.ProjectDetailActivity;
 import emebesoft.com.mycvapp.R;
 import objects.ProjectObject;
@@ -25,14 +27,14 @@ import objects.ProjectObject;
  */
 public class ProjectsFragment extends Fragment{
 
-    private RecyclerView projectRecyclerView;
+    @BindView(R.id.projectRecyclerView) RecyclerView projectRecyclerView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View fragmentView = inflater.inflate(R.layout.fragment_projects, container, false);
+        ButterKnife.bind(this, fragmentView);
 
-        projectRecyclerView = (RecyclerView)fragmentView.findViewById(R.id.projectRecyclerView);
         Drawable horizontalDivider = ContextCompat.getDrawable(getContext(), R.drawable.divider_horizontal_recycler_view);
         projectRecyclerView.setHasFixedSize(true);
 
@@ -44,14 +46,12 @@ public class ProjectsFragment extends Fragment{
         projectRecyclerView.setLayoutManager(new GridLayoutManager(getContext(), 1));
         projectRecyclerView.addItemDecoration(new DividerItemDecoration(horizontalDivider));
 
-        projectAdapter.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        projectAdapter.setOnClickListener(v -> {
                 Intent intent = new Intent(getContext(), ProjectDetailActivity.class);
                 intent.putExtra("projectID", projectRecyclerView.getChildAdapterPosition(v));
                 startActivity(intent);
             }
-        });
+        );
 
 
         return fragmentView;
