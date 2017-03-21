@@ -11,44 +11,33 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <meta-data android:name="DATABASE" android:value="@string/app_db" />
+        <meta-data android:name="VERSION" android:value="2" />
+        <meta-data android:name="QUERY_LOG" android:value="true" />
+        <meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="objects" />
+
+        <activity android:name="splashView.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
-
-        <meta-data
-            android:name="DATABASE"
-            android:value="sugar_example.db" />
-        <meta-data
-            android:name="VERSION"
-            android:value="2" />
-        <meta-data
-            android:name="QUERY_LOG"
-            android:value="true" />
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="@string/maps_api_key" />
-
-        <uses-feature
-            android:glEsVersion="0x00020000"
-            android:required="true"/>
 
         <activity android:name=".ExperienceDetailActivity" />
         <activity android:name=".ProjectDetailActivity" />
-        <activity android:name=".SplashActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity android:name=".MapsActivity"></activity>
+
+        <service
+            android:name="services.InitDbService"
+            android:exported="false" />
     </application>
 
 </manifest>

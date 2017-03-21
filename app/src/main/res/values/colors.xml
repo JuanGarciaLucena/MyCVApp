@@ -3,6 +3,7 @@
     <color name="colorPrimary">#014565</color>
     <color name="colorPrimaryDark">#01344c</color>
     <color name="colorAccent">#02A7F2</color>
+    <color name="colorGreyDark">#696969</color>
 
     <!-- Demo colors -->
     <color name="demo_color_red">#f7325f</color>

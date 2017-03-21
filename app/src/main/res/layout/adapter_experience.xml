@@ -1,23 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+
+<android.support.v7.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:elevation="20dp"
+    android:layout_margin="5dp">
+
+<LinearLayout
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
+    android:weightSum="100"
     android:padding="10dp"
     android:gravity="center">
 
     <ImageView
         android:id="@+id/logoCompany"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="0dp"
+        android:layout_weight="75"/>
 
     <TextView
         android:id="@+id/nameCompany"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="25"
         android:padding="5dp"
         android:textSize="20sp"
         android:gravity="center"/>
 
 </LinearLayout>
+
+</android.support.v7.widget.CardView>

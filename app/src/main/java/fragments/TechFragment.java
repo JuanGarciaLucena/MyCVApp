@@ -30,8 +30,6 @@ public class TechFragment extends Fragment{
         View fragmentView = inflater.inflate(R.layout.fragment_tech, container, false);
         ButterKnife.bind(this, fragmentView);
 
-        Drawable horizontalDivider = ContextCompat.getDrawable(getContext(), R.drawable.divider_horizontal_recycler_view);
-        Drawable verticalDivider = ContextCompat.getDrawable(getContext(), R.drawable.divider_vertical_recycler_view);
         techRecyclerView.setHasFixedSize(true);
 
         SugarContext.init(getContext());
@@ -40,8 +38,6 @@ public class TechFragment extends Fragment{
 
         techRecyclerView.setAdapter(techAdapter);
         techRecyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2));
-        techRecyclerView.addItemDecoration(new GridDividerItemDecoration(horizontalDivider, verticalDivider, 2));
-
 
         return fragmentView;
     }

@@ -1,5 +1,7 @@
 <resources>
+
     <string name="app_name">MyCVApp</string>
+    <string name="app_db">my_cv.db</string>
 
     <!-- Strings used in Manifest -->
     <string name="maps_api_key">AIzaSyA7IMtJ6smG4PNvgNFVuXxa1KV_PMAt1VA</string>
@@ -16,6 +18,7 @@
     <string name="presentation">Carta de presentación</string>
     <string name="experience">Experiencia</string>
     <string name="tech">Tecnologías</string>
+    <string name="library">Librerías</string>
     <string name="projects">Proyectos</string>
     <string name="personal">Datos Personales</string>
     <string name="test_field">Campo de Pruebas</string>
@@ -179,5 +182,8 @@
             varias funcionalidades como sección de noticias y la galería de imágenes asi como
             arreglar todos los bugs que van surgiendo.</p>]]>
     </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

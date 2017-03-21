@@ -39,8 +39,6 @@ public class ExperienceFragment extends Fragment {
         List<ExperienceObject> experienceObjectList = ExperienceObject.findWithQuery(ExperienceObject.class, "Select * from experience_object");
         SugarContext.terminate();
 
-        Drawable dividerDrawable = ContextCompat.getDrawable(getContext(), R.drawable.divider_horizontal_recycler_view);
-        experienceList.addItemDecoration(new DividerItemDecoration(dividerDrawable));
         experienceList.setHasFixedSize(true);
 
         final ExperienceAdapter experienceAdapter = new ExperienceAdapter(experienceObjectList);

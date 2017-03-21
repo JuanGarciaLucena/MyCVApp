@@ -35,7 +35,6 @@ public class ProjectsFragment extends Fragment{
         View fragmentView = inflater.inflate(R.layout.fragment_projects, container, false);
         ButterKnife.bind(this, fragmentView);
 
-        Drawable horizontalDivider = ContextCompat.getDrawable(getContext(), R.drawable.divider_horizontal_recycler_view);
         projectRecyclerView.setHasFixedSize(true);
 
         SugarContext.init(getContext());
@@ -44,7 +43,6 @@ public class ProjectsFragment extends Fragment{
 
         projectRecyclerView.setAdapter(projectAdapter);
         projectRecyclerView.setLayoutManager(new GridLayoutManager(getContext(), 1));
-        projectRecyclerView.addItemDecoration(new DividerItemDecoration(horizontalDivider));
 
         projectAdapter.setOnClickListener(v -> {
                 Intent intent = new Intent(getContext(), ProjectDetailActivity.class);
